@@ -1,2 +1,2 @@
 # keith-website
-Git Repo for my personal website - trying to use Github Pages
+Git Repo of my website, trying yo get Github Pages working

@@ -1,1 +1,271 @@
-<h1>Hello World!</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>HOME | Keith Light - Frontend Developer</title>
+  <meta name="description" content="Hi, my name it Keith. I am a frontend developer based in Hampshire, UK. I build responsive websites for mobile, tablet and desktops.">
+  <!-- Open Graph data
+		<meta property="og:title" content="Title Here" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="http://www.example.com/" />
+		<meta property="og:image" content="http://example.com/image.jpg" />
+		<meta property="og:description" content="Description Here" /> -->
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicons and bookmark images in the /favicons/ directory -->
+
+  <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="favicons/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="favicons/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#9c010a">
+  <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+  <meta name="msapplication-config" content="favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Resets, Lanes, Additional CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/lanes.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+  <!-- Main Style Sheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- STYLES FOR PEOPLE WITH JS DISABLED -->
+  <noscript>
+    <link rel="stylesheet" href="css/noscript-style.css">
+  </noscript>
+
+  <!--[if lt IE 9]>
+        	<link rel="stylesheet" href="css/ie.css">
+            <script src="js/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body class="front-page">
+  <!--[if lt IE 9]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+  <!-- MAIN BODY START -->
+  <header class="front-page">
+    <h1><a href="/"><img src="images/logo-small.png" class="headerlogo"></a></h1>
+  </header>
+
+  <!-- SECTIONS -->
+  <section class="container hero">
+
+    <h2>I build websites...</h2>
+    <div class="row">
+      <div class="six columns">
+        <p>Hi, my name is Keith. I am a frontend developer based in Hampshire, UK. I build responsive websites for mobile, tablet and desktops.</p>
+        <p>Feel free to contact me about anything web related.</p>
+
+        <h3>See my work on CodePen</h3>
+        <div class="codepen">
+          <a href="http://codepen.io/keefyboooo/" target="_blank"><i class="fa fa-codepen"></i></a>
+        </div>
+
+        <h3>Check out some of my current projects below</h3>
+      </div>
+      <div class="six columns">
+        <img src="images/responsive-design.png" class="responsive-banner">
+      </div>
+    </div>
+
+    <h2>Skills</h2>
+    <div class="row">
+      <div class="six columns centered">
+        <div class="skills">
+          <dl>
+            <dt>HTML</dt>
+            <dd class="skill-percent html" data-percent="90"></dd>
+            <dt>CSS</dt>
+            <dd class="skill-percent css" data-percent="90"></dd>
+            <dt>jQuery</dt>
+            <dd class="skill-percent jquery" data-percent="60"></dd>
+            <dt>SCSS</dt>
+            <dd class="skill-percent scss" data-percent="50"></dd>
+            <dt>Javascript</dt>
+            <dd class="skill-percent javascript" data-percent="40"></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="row">
+      <div class="six columns">
+        <h3>Dirtees - Crude T-Shirt Design Store</h3>
+
+        <div class="projects">
+          <a href="http://dirtees.co.uk/index.html" target="_blank"><img src="images/dirtees.jpg"></a>
+        </div>
+
+        <p>Dirtess is a small company based in Gosport, Hampshire that create crude, satirical and parody t-shirts.</p>
+        <p>The website is built on a CMS called Sellerdeck (formally known as Actinic), this was chosen to manage the large amount of products, deal with the checkout process and keep it secure. Using Sellerdeck has made it slightly more challenging due
+          to the way it complies the data, it uses PERL for the backend which complies the static pages using templates.</p>
+        <h3>Features</h3>
+        <ul>
+          <li>Content Management System</li>
+          <li>Integrated Blog System</li>
+          <li>Custom Light Box (jQuery)</li>
+          <li>jQuery running total when adding quantity</li>
+          <li>Custom CSS and Layout integrated with Sellerdeck</li>
+          <li>Managed Hosting and email</li>
+          <li>Support for older browsers</li>
+          <li>Google Analytics</li>
+        </ul>
+      </div>
+
+      <div class="six columns">
+        <h3>Ela Rae Music - Classical Wedding Musicians</h3>
+
+        <div class="projects">
+          <a href="http://www.elaraemusic.com" target="_blank"><img src="images/erm.jpg"></a>
+        </div>
+
+        <p>Ela Rae Music is a London based collection of classical musicians who specialise in high-end weddings,functions and events.</p>
+        <p>The website is built from scratch using PHP to compile the pages, I built a contact form with a "honey trap" capture to avoid the need of a CAPTCHA box. The website is built on a CSS grid system (LANES), which allows it to be fully responsive
+          across all devices. I also took advantage of HTML5 properties for better user experience (inputs, structure etc).</p>
+        <h3>Features</h3>
+        <ul>
+          <li>Bespoke design, CSS grid system</li>
+          <li>Fully Responsive Design</li>
+          <li>PHP generated pages and content</li>
+          <li>PHP contact form - with honey trap</li>
+          <li>CSS animations, jQuery functions</li>
+          <li>BX-Slider for rotating carousel</li>
+          <li>Managed Hosting and email</li>
+          <li>Support for older browsers</li>
+          <li>Google Analytics</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="six columns">
+        <h3>Stitch Republic - Badges Website</h3>
+
+        <div class="projects">
+          <a href="http://www.stitch-republic.com" target="_blank"><img src="images/stitch-republic.jpg"></a>
+        </div>
+
+        <p>Stitch Republic supplies embroidered, woven, printed and rubber badges to clubs, teams schools and special events.</p>
+        <p>The website is built from scratch using PHP to compile the pages, features a PHP contact form and PHP order form with image upload. Both PHP forms use the "honey trap" technique for SPAM filtering. The website is built on a CSS grid system (LANES),
+          which allows it to be fully responsive across all devices. The responsive menu has 3 break points so small, medium and larger screens.</p>
+        <h3>Features</h3>
+        <ul>
+          <li>Bespoke design, CSS grid system</li>
+          <li>Fully Responsive Design</li>
+          <li>Custom Light Box (jQuery)</li>
+          <li>PHP generated pages and content</li>
+          <li>PHP contact & order form - with honey trap</li>
+          <li>CSS animations, jQuery functions</li>
+          <li>Managed Hosting and email</li>
+          <li>Support for older browsers</li>
+          <li>Google Analytics</li>
+        </ul>
+      </div>
+
+      <div class="six columns">
+        <h3>Embroidery Mill (redesign) - embroidery designs</h3>
+
+        <div class="projects">
+          <a href="http://www.embroiderymill.co.uk/acatalog/test/index.html" target="_blank"><img src="images/embroidery-mill.jpg"></a>
+        </div>
+
+        <p>Embroidery Mill is the UKs largest embroidery stock design library.</p>
+        <p>Originally built (by me) a few years back, the standard template provided by sellerdeck is a bit dated. This redesign features a new layout, colour co-ordinated headers, buttons and menu, a new contact form and newsletter sign-up and some custom
+          javascript functions. Embroidery Mill is also built on Sellerdeck, which manages the backend and data-storage. As there is over 3000 products it needed something robust to manage all the products.</p>
+        <h3>Features</h3>
+        <ul>
+          <li>Content Management System</li>
+          <li>Pop-Out PDF script</li>
+          <li>Newsletter Sign-Up</li>
+          <li>jQuery scroll-to-top button</li>
+          <li>Custom CSS and Layout integrated with Sellerdeck</li>
+          <li>Managed Hosting and email</li>
+          <li>Support for older browsers</li>
+          <li>Google Analytics</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Contact Me</h2>
+    <div class="row">
+      <div class="six columns centered">
+        <div id="contact">
+
+          <form name="Form" method="post" action="http://formspree.io/keith.light1986@gmail.com" onsubmit="return validateForm()" autocomplete="off">
+
+            <label for="Name">Name:</label>
+            <input type="text" name="Name" id="Name" placeholder="Name" />
+
+            <label for="Tel">Tel:</label>
+            <input type="tel" name="Tel" id="Tel" placeholder="07777 77777" />
+
+            <label for="Email">Email:</label>
+            <input type="email" name="Email" id="Email" placeholder="example@me.com" />
+
+            <label for="Message">Message:</label>
+            <br>
+            <textarea name="Message" rows="20" cols="20" id="Message" placeholder="Please enter your message here"></textarea>
+
+            <input type="submit" name="submit" value="Submit" class="submit-button" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">&copy; Keith Light 2015</div>
+
+    <div class="social-icons">
+      <a href="http://codepen.io/keefyboooo/">
+        <i class="fa fa-codepen"></i>
+      </a>
+      <a href="https://github.com/keefyhub">
+        <i class="fa fa-github"></i>
+      </a>
+    </div>
+  </footer>
+  <!--NO CONTENT SHOULD GO UNDER HERE -->
+
+  <!-- NOTICE FOR PEOPLE WITH JS DISABLED -->
+  <noscript id="noscript">
+    <label for="toggle-1">
+      <img src="/images/close.png">
+    </label>
+    <input type="checkbox" id="toggle-1">
+    <div>
+      <p>This site uses <span>javascript</span>, for full access please enable scripting</p>
+    </div>
+  </noscript>
+  <script src="js/jquery.js"></script>
+  <script src="js/scripts.js"></script>
+  <!-- Google Analytics: change UA-XXXXX-X to site ID.-->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    				
+    				ga('create', 'UA-57058005-1', 'auto');
+    				ga('send', 'pageview');
+  </script>
+</body>
+
+</html>
