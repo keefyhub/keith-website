@@ -32,9 +32,11 @@ $(window).scroll(function() {
     });
   }
   // display arrow-up if near the bottom of the page
-  if ($(window).scrollTop() + $(window).height() > $(document).height() - $(window).height()) {
-    $('.arrow-up').fadeIn(600);
+  var a = $(window).scrollTop() + $(window).height();
+  var b = $(document).height() - $(window).height();
+  if (a > b) {
+    $('.arrow-up').addClass("arrow-active");
   } else {
-    $('.arrow-up').fadeOut(800);
+    $('.arrow-up').removeClass("arrow-active");
   }
 });
