@@ -1,77 +1,17 @@
 $(document).ready(function () {
-    /* Push the nav over by 250px over */
-    $('.menu-icon').click(function () {
-        $('.nav-menu').animate({
-            left: "0px"
-        }, 600);
-        $('body').addClass('menu-active');
+  $('.js-contact').click(function(e){
+  e.preventDefault;
+  $('html, body').animate({
+        scrollTop: $("#contact").offset().top
+    }, 2000);
+  });
+  
+  $('.arrow-up').click(function() {
+    $('body,html').animate({
+      scrollTop: 0
+      }, 500);
     });
-
-    /* Then push back */
-    $('.icon-close').click(function () {
-        $('.nav-menu').animate({
-            left: "-250px"
-        }, 600);
-        $('body').removeClass('menu-active');
-    });
-    /* Mail Tab */
-    $('.mail-icon').click(function () {
-        $('.contact').animate({
-            left: "0px"
-        }, 600);
-        $('body').addClass('menu-active');
-    });
-
-    /* Then push back */
-    $('.icon-close').click(function () {
-        $('.contact').animate({
-            left: "-250px"
-        }, 600);
-        $('body').removeClass('menu-active');
-    }); // End Popout options
-	
-	/* make menu smaller on scroll 
-	$(document).on('scroll', function(){
-	var t = $(document).scrollTop();
-	var w = $(window).width();
-	
-	$('header').toggleClass('header-small', t > 150 && (w > 750));	
-	}); // End of menu mini */
-	
-    $(window).on("swiperight", function (event) {
-        $('.nav-menu').animate({
-            left: "0px"
-        }, 600);
-        $('body').addClass('menu-active');
-    });
-
-    $(window).on("swipeleft", function (event) {
-        $('.nav-menu, .contact').animate({
-            left: "-250px"
-        }, 600);
-        $('body').removeClass('menu-active');
-    }); // End swipe to close */
 });
-
-// Lightbox event
-if ($(window).width() > 480) {
-$('img.lightbox').on('click', function(){
-	$('div#lightbox').fadeIn(700);
-	var imageSrc = $(this).attr('src');
-	$('div#lightbox img').attr('src', imageSrc);
-});
-
-$('div#lightbox').on('click', function(){
-	$('div#lightbox').fadeOut(500);
-}); // End of lightbox click function
-
-$(document).keydown(function(e){
-	var esc = e.keyCode == 27;
-  if (esc) {
-      $('div#lightbox').fadeOut(500);
-   }
-}); // End of keypress ESC to exit lightbox
-}
 
 $(window).scroll(function() {
   // get skills position from top
@@ -90,5 +30,13 @@ $(window).scroll(function() {
         width: $(this).data('percent') + '%'
       }, 1000);
     });
+  }
+  // display arrow-up if near the bottom of the page
+  var a = $(window).scrollTop() + $(window).height();
+  var b = $(document).height() - $(window).height();
+  if (a > b) {
+    $('.arrow-up').addClass("arrow-active");
+  } else {
+    $('.arrow-up').removeClass("arrow-active");
   }
 });
