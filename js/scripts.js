@@ -2,12 +2,12 @@ $(document).ready(function () {
   $('.js-contact').click(function(e){
   e.preventDefault;
   $('html, body').animate({
-        scrollTop: $("#contact").offset().top
+        scrollTop: $("#contact").position().top
     }, 2000);
   });
   
   $('.arrow-up').click(function() {
-    $('body,html').animate({
+    $('body').animate({
       scrollTop: 0
       }, 500);
     });
@@ -32,8 +32,8 @@ $(window).scroll(function() {
     });
   }
   // display arrow-up if near the bottom of the page
-  var a = $(window).scrollTop() + $(window).height();
-  var b = $(document).height() - $(window).height();
+  var a = $(window).scrollTop();
+  var b = $(window).height() / 2;
   if (a > b) {
     $('.arrow-up').addClass("arrow-active");
   } else {
