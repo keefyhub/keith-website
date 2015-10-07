@@ -1,78 +1,93 @@
 @import url(http://fonts.googleapis.com/css?family=Lustria|Lato:300,400,700);
+
+@import 'mixins/reset';
+@import 'mixins/lanes';
+@import 'mixins/material-design-colors';
+
+$body-font-stack: 'Lato', Tahoma, Geneva, sans-serif;
+$header-font-stack: 'Lustria';
+
+
+
+
+
+
+
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body {
-  font-family: 'Lato', Tahoma, Geneva, sans-serif;
-  font-size: 1.4rem;
+  font-family: $body-font-stack;
+  font-size: 1rem;
   line-height: 1.5;
-  background: #ffffff;
-  color: #58595b;
+  color: $grey900;
+  background: #b4d7d9 url(/images/blurry-background.jpg)no-repeat center center;
+  /* fallback for older browsers */
+  background-size: cover;
+  background: linear-gradient(#b4d7d9, #eccfbd);
   transition: background 1.5s;
 }
 
 header {
-  background: #9c010a;
-  padding-top: 100px;
+  padding: 1rem;
+  background: $red500;
   text-align: center;
-}
-
-hr.hr-spacer {
-  height: 20px;
-  background: #272727;
-  margin: 40px 0;
-  border: none;
-}
-
-hr {
-  border: 0;
-  height: 1px;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 footer {
   font-size: 1.4rem;
-  background: #9c010a;
+  background: $red500;
   color: #ffffff;
   text-align: center;
   padding: 10px 0 10px 0;
 }
+
+
+
+
+
+
 /* ==========================================================================
    Font Edits
    ========================================================================== */
 
-h2.title {
-  font-size: 1.4rem;
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 10px 0;
 }
 
 h2 {
-  font-size: 2rem;
-  padding: 10px 0;
+  font-size: 2.5rem;
+  font-family: $header-font-stack;
   font-weight: 700;
-  font-family: 'Lustria';
 }
 
 h3 {
-  font-size: 1.4rem;
-  padding: 10px 0;
-  font-weight: 700;
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-family: $header-font-stack;
 }
 
 p {
   margin: 1rem 0;
-}
-
-p:first-child {
-  margin: 0 0 1rem 0;
+  &:first-child {
+    margin: 0 0 1rem 0;
+  }
 }
 
 b {
   font-weight: 700;
 }
+
+
+
+
+
+
 /* ==========================================================================
    Links
    ========================================================================== */
@@ -91,14 +106,26 @@ a {
 .row a:hover {
   color: #9c010a;
 }
+
+
+
+
+
+
+
 /* ==========================================================================
    Main Sections
    ========================================================================== */
 /* GLOBAL */
 
 .hero {
-  padding: 20px 20px 20px 20px;
 }
+
+
+
+
+
+/* SSBD */
 
 div.SSBD p {
   padding: 10px;
@@ -107,28 +134,23 @@ div.SSBD p {
 div.SSBD p:nth-of-type(even) {
   background: rgba(100, 100, 100, 0.15);
 }
-/* FRONT PAGE */
 
-body.front-page {
-  background: #b4d7d9 url(/images/blurry-background.jpg)no-repeat center center;
-  /*fallback for older browsers*/
-  
-  background-size: cover;
-  background: linear-gradient(#b4d7d9, #eccfbd);
-}
 
-header.front-page {
-  padding-top: 0;
-  background: #21252b;
-}
 
-.responsive-banner {
-  width: 100%;
-}
+
+
+
+/* Headline Section */
 
 .coding-links {
   font-size: 2rem;
+  & i {margin-right: 2rem;}
 }
+
+
+
+
+
 /* Skills */
 
 dt:after {
@@ -139,40 +161,58 @@ dt:after {
   display: block;
 }
 
-dd {
+.skill-percent {
   background: red;
   width: 0;
   height: 0.5rem;
   position: relative;
   top: -0.5rem;
+  font-size: 0;
 }
 
-dd.html {
-  background: #F44336;
+.html {
+  background: $red500;
 }
 
-dd.css {
-  background: #2196F3;
+.css {
+  background: $blue500;
 }
 
-dd.jquery {
-  background: #FFCA28;
+.jquery {
+  background: $amber400;
 }
 
-dd.scss {
-  background: #F06292;
+.scss {
+  background: $pink300;
 }
 
-dd.javascript {
-  background: #FFA000;
+.javascript {
+  background: $amber700;
 }
 
-dd.php {
-  background: #303F9F;
+.ruby {
+  background: #e9573f;
 }
+
+.php {
+  background: $indigo700;
+}
+
+
+
+
+
 /* Projects */
 
-.projects {
+.projects .title {
+  border-bottom: 1px solid $grey900;
+}
+
+.projects h4 {
+  font-style: italic;
+}
+
+.projects_images {
   margin: 10px 0;
   overflow: hidden;
   background: #2e2e2e;
@@ -186,6 +226,12 @@ dd.php {
   transform: scale(1.2);
   opacity: 0.8;
 }
+
+
+
+
+
+
 /* ==========================================================================
    Images
    ========================================================================== */
@@ -217,9 +263,13 @@ div#lightbox img {
   border-radius: 2%;
   border: 4px solid rgba(239, 62, 47, 0.5);
 }
-/* ==========================================================================
-   Background Animations
-   ========================================================================== */
+
+
+
+
+
+
+
 /* ==========================================================================
    Nav Bar
    ========================================================================== */
@@ -249,6 +299,12 @@ nav.nav-main a:hover,
 a.active {
   background: #550106;
 }
+
+
+
+
+
+
 /* ==========================================================================
    Pop Out Menu
    ========================================================================== */
@@ -291,6 +347,13 @@ nav.nav-menu {
 .nav-menu a:hover {
   margin: 0 0 0 10px;
 }
+
+
+
+
+
+
+
 /* ==========================================================================
    Icons
    ========================================================================== */
@@ -326,6 +389,13 @@ nav.nav-menu {
 .social-icons i:hover {
   transform: translateY(-10px);
 }
+
+
+
+
+
+
+
 /* ==========================================================================
    Contact Form
    ========================================================================== */
@@ -393,30 +463,46 @@ textarea {
 #contact input[type="submit"]:hover {
   opacity: 0.7;
 }
+
+
+
+
+
+
+
 /* ==========================================================================
    EDITS
    ========================================================================== */
    
-   .arrow-up {
-     opacity: 0;
-     visibility: hidden;
-     position: fixed;
-     bottom: 30px;
-     right: 20px;
-     background: #21252b;
-     color: #fff;
-     padding: 10px 15px;
-     font-size: 1.5rem;
-     transition: all 0.7s;
-     transform: translateZ(0);
-     cursor: pointer;
-   }
-   
-   .arrow-active {
-     opacity: 1;
-     visibility: visible;
-     bottom: 20px;
-   }
+.arrow-up {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background: #21252b;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  transition: all 0.7s;
+  transform: translateZ(0);
+  cursor: pointer;
+
+
+  &.arrow-active {
+    opacity: 1;
+    visibility: visible;
+    bottom: 20px;
+  }
+
+
+}
+
+
+
+
+
+
 /* ==========================================================================
    Browse Happy prompt
    ========================================================================== */
@@ -428,6 +514,12 @@ textarea {
   color: #000;
   padding: 10px 0 10px 0;
 }
+
+
+
+
+
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */

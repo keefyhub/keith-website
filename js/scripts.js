@@ -31,6 +31,7 @@ $(window).scroll(function() {
       }, 1000);
     });
   }
+  
   // display arrow-up if near the bottom of the page
   var a = $(window).scrollTop();
   var b = $(window).height() / 2;

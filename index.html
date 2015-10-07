@@ -33,12 +33,10 @@
   <meta name="msapplication-config" content="favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- Resets, Lanes, Additional CSS -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/lanes.css">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
-  <!-- Main Style Sheet -->
+  <!-- Main Style Sheet (inc reset and lanes) -->
   <link rel="stylesheet" href="css/style.css">
 
   <!-- STYLES FOR PEOPLE WITH JS DISABLED -->
@@ -47,31 +45,38 @@
   </noscript>
 
   <!--[if lt IE 9]>
-        	<link rel="stylesheet" href="css/ie.css">
-            <script src="js/html5.js"></script>
-        <![endif]-->
+    <link rel="stylesheet" href="css/ie.css">
+    <script src="js/html5.js"></script>
+  <![endif]-->
 </head>
 
-<body class="front-page">
+<body class="">
   <!--[if lt IE 9]>
 	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-  <!-- MAIN BODY START -->
-  <header class="front-page">
+  <!-- MAIN BODY //-->
+  <header class="">
     <h1><a href="/"><img src="images/logo-small.png" class="headerlogo"></a></h1>
   </header>
 
-  <!-- SECTIONS -->
-  <section class="container hero">
+  <!-- SECTIONS //-->
+  <section class="container">
 
     <h2>I build websites...</h2>
     <div class="row">
       <div class="six columns">
         <p>Hi, my name is Keith. I am a frontend developer based in Hampshire, UK. I build responsive websites for mobile, tablet and desktops.</p>
         <p>Feel free to <a href="#" class="js-contact">contact me</a> about anything web related.</p>
+      </div>
+      <div class="six columns">
+        <img src="images/responsive-design.png" class="responsive-banner">
+      </div>
+    </div>
 
-        <h3>See my work on CodePen and GitHub</h3>
+    <div class="row">
+      <div class="twelve columns">
+        <h4>See my work on CodePen and GitHub</h4>
         <div class="coding-links">
           <a href="http://codepen.io/keefyboooo/">
             <i class="fa fa-codepen"></i>
@@ -81,41 +86,44 @@
           </a>
         </div>
 
-        <h3>Check out some of my current projects below</h3>
-      </div>
-      <div class="six columns">
-        <img src="images/responsive-design.png" class="responsive-banner">
+        <h4>Check out some of my current projects below</h4>
       </div>
     </div>
 
+<!-- SKILLS //-->
     <h2>Skills</h2>
     <div class="row">
       <div class="six columns centered">
         <div class="skills">
           <dl>
             <dt>HTML</dt>
-            <dd class="skill-percent html" data-percent="90"></dd>
+            <dd class="skill-percent html" data-percent="90">90%</dd>
             <dt>CSS</dt>
-            <dd class="skill-percent css" data-percent="90"></dd>
+            <dd class="skill-percent css" data-percent="90">90%</dd>
             <dt>jQuery</dt>
-            <dd class="skill-percent jquery" data-percent="60"></dd>
+            <dd class="skill-percent jquery" data-percent="60">60%</dd>
             <dt>SCSS</dt>
-            <dd class="skill-percent scss" data-percent="50"></dd>
+            <dd class="skill-percent scss" data-percent="50">50%</dd>
             <dt>Javascript</dt>
-            <dd class="skill-percent javascript" data-percent="40"></dd>
+            <dd class="skill-percent javascript" data-percent="40">40%</dd>
+            <dt>Ruby</dt>
+            <dd class="skill-percent ruby" data-percent="20">20%</dd>
             <dt>PHP</dt>
-            <dd class="skill-percent php" data-percent="10"></dd>
+            <dd class="skill-percent php" data-percent="10">10%</dd>
           </dl>
         </div>
       </div>
     </div>
 
+<!-- PROJECTS //-->
+    <section class="projects">
     <h2>Projects</h2>
     <div class="row">
       <div class="six columns">
-        <h3>Dirtees - Crude T-Shirt Design Store</h3>
+        <h3 class="title">Dirtees</h3>
+        <h4>Crude T-Shirt Design Store</h4>
 
-        <div class="projects">
+        <div class="projects_images">
           <a href="http://dirtees.co.uk/index.html" target="_blank"><img src="images/dirtees.jpg"></a>
         </div>
 
@@ -136,9 +144,10 @@
       </div>
 
       <div class="six columns">
-        <h3>Ela Rae Music - Classical Wedding Musicians</h3>
+        <h3 class="title">Ela Rae Music</h3>
+        <h4>Classical Wedding Musicians</h4>
 
-        <div class="projects">
+        <div class="projects_images">
           <a href="http://www.elaraemusic.com" target="_blank"><img src="images/erm.jpg"></a>
         </div>
 
@@ -162,9 +171,10 @@
 
     <div class="row">
       <div class="six columns">
-        <h3>Stitch Republic - Badges Website</h3>
+        <h3 class="title">Stitch Republic</h3>
+        <h4>Badges Website</h4>
 
-        <div class="projects">
+        <div class="projects_images">
           <a href="http://www.stitch-republic.com" target="_blank"><img src="images/stitch-republic.jpg"></a>
         </div>
 
@@ -186,9 +196,10 @@
       </div>
 
       <div class="six columns">
-        <h3>Embroidery Mill (redesign) - embroidery designs</h3>
+        <h3 class="title">Embroidery Mill (redesign)</h3>
+        <h4>Stock Embroidery Designs</h4>
 
-        <div class="projects">
+        <div class="projects_images">
           <a href="http://www.embroiderymill.co.uk/acatalog/test/index.html" target="_blank"><img src="images/embroidery-mill.jpg"></a>
         </div>
 
@@ -208,7 +219,9 @@
         </ul>
       </div>
     </div>
+  </section>
 
+<!-- CONTACT //-->
     <h2>Contact Me</h2>
     <div class="row">
       <div class="six columns centered">
@@ -236,7 +249,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER //-->
   <footer>
     <div class="container">&copy; Keith Light 2015</div>
 
@@ -249,13 +262,13 @@
       </a>
     </div>
   </footer>
-  <!--NO CONTENT SHOULD GO UNDER HERE -->
+  <!--// NO CONTENT SHOULD GO UNDER HERE //-->
   
   <span class="arrow-up">
     <i class="fa fa-chevron-up"></i>
   </span>
 
-  <!-- NOTICE FOR PEOPLE WITH JS DISABLED -->
+  <!--// NOTICE FOR PEOPLE WITH JS DISABLED //-->
   <noscript id="noscript">
     <label for="toggle-1">
       <img src="/images/close.png">
@@ -267,7 +280,7 @@
   </noscript>
   <script src="js/jquery.js"></script>
   <script src="js/scripts.js"></script>
-  <!-- Google Analytics: change UA-XXXXX-X to site ID.-->
+  <!--// Google Analytics: change UA-XXXXX-X to site ID//-->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
