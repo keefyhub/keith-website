@@ -12,7 +12,10 @@ $bounceInOut: cubic-bezier(1,-1.25,0,1.75);
 
 
 
-
+::selection {
+  background: $red500;
+  color: $grey50;
+}
 
 
 html {
@@ -169,11 +172,14 @@ div.SSBD p:nth-of-type(even) {
 
 .coding-links {
   font-size: 2rem;
-  & i {margin-right: 2rem;}
+  & a {margin-right: 2rem;}
 }
 
 
-
+/* Responsive Banner */
+.responsive-banner {
+  text-align: center;
+}
 
 
 /* Skills */
@@ -193,7 +199,14 @@ dt:after {
   position: relative;
   top: -0.5rem;
   font-size: 0;
-  transition: all 1s;
+  transition: all 1s $bounceInOut;
+}
+
+// loop for adding transition delay to each skill 
+@for $i from 1 through 7 {
+  .skills dd:nth-of-type(#{$i}) {
+    transition-delay: 0.15 * $i + s;
+  }
 }
 
 .html {
@@ -260,8 +273,9 @@ dt:after {
 
 .coming-soon {
   & p, & li {
-    height: 1rem;
-    background: $grey400;
+    height: 14rem;
+    background: linear-gradient($grey400 50%, transparent 50%);
+    background-size: 1rem 3rem;
     margin: 1rem 0;
   }
 }
