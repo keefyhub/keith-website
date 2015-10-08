@@ -14,4 +14,5 @@
 ._*
 .cache
 .DS_Store
+.sass-cache
 Thumbs.db

@@ -7,6 +7,8 @@
 $body-font-stack: 'Lato', Tahoma, Geneva, sans-serif;
 $header-font-stack: 'Lustria';
 
+$bounceInOut: cubic-bezier(1,-1.25,0,1.75);
+
 
 
 
@@ -30,17 +32,21 @@ body {
 }
 
 header {
-  padding: 1rem;
   background: $red500;
   text-align: center;
+  overflow: hidden;
 }
 
 footer {
   font-size: 1.4rem;
   background: $red500;
-  color: #ffffff;
+  color: $grey50;
   text-align: center;
   padding: 10px 0 10px 0;
+}
+
+section.container , footer {
+  margin-top: 5rem;
 }
 
 
@@ -99,12 +105,12 @@ a {
 
 .row a {
   font-weight: 700;
-  color: #58595b;
+  color: $grey900;
   transition: color 0.7s;
 }
 
 .row a:hover {
-  color: #9c010a;
+  color: $red500;
 }
 
 
@@ -119,6 +125,25 @@ a {
 /* GLOBAL */
 
 .hero {
+}
+
+
+
+
+
+/* Header */
+.headerlogo {
+  max-width: 100px;
+  transform: translateY(100px);
+  opacity: 0;
+  animation: fadeInUp 1s forwards $bounceInOut;
+}
+
+@keyframes fadeInUp {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 
@@ -168,6 +193,7 @@ dt:after {
   position: relative;
   top: -0.5rem;
   font-size: 0;
+  transition: all 1s;
 }
 
 .html {
@@ -191,7 +217,7 @@ dt:after {
 }
 
 .ruby {
-  background: #e9573f;
+  background: $red600;
 }
 
 .php {
@@ -215,7 +241,7 @@ dt:after {
 .projects_images {
   margin: 10px 0;
   overflow: hidden;
-  background: #2e2e2e;
+  background: $grey900;
 }
 
 .projects img {
@@ -230,39 +256,24 @@ dt:after {
 
 
 
+/* Coming Soon */
+
+.coming-soon {
+  & p, & li {
+    height: 1rem;
+    background: $grey400;
+    margin: 1rem 0;
+  }
+}
+
+
+
+
 
 
 /* ==========================================================================
    Images
    ========================================================================== */
-
-.headerlogo {
-  max-width: 50px;
-}
-/* Light box */
-
-img.lightbox {
-  cursor: pointer;
-}
-
-div#lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.75);
-  z-index: 20;
-  display: none;
-}
-
-div#lightbox img {
-  height: 80%;
-  margin: 5% 0 0 0;
-  border-radius: 2%;
-  border: 4px solid rgba(239, 62, 47, 0.5);
-}
 
 
 
@@ -274,7 +285,7 @@ div#lightbox img {
    Nav Bar
    ========================================================================== */
 
-nav.nav-main {
+.nav-main {
   background: #272727;
   padding: 20px 0;
   text-align: left;
@@ -285,19 +296,16 @@ nav.nav-main {
   top: 0;
   z-index: 50;
   box-shadow: 0 3px 5px 2px rgba(0, 0, 0, 0.25);
-}
-
-nav.nav-main a {
-  font-weight: 700;
-  color: #ffffff;
-  padding: 24px 30px;
-  text-decoration: none;
-  transition: background 0.5s, border-top 0.7s;
-}
-
-nav.nav-main a:hover,
-a.active {
-  background: #550106;
+  & a {
+    font-weight: 700;
+    color: $grey50;
+    padding: 24px 30px;
+    text-decoration: none;
+    transition: background 0.5s, border-top 0.7s;
+    &:hover, &.active {
+      background: #550106;
+    }
+  }
 }
 
 
@@ -309,7 +317,7 @@ a.active {
    Pop Out Menu
    ========================================================================== */
 
-nav.nav-menu {
+.nav-menu {
   background: #272727;
   left: -250px;
   /* start off behind the scenes */
@@ -336,7 +344,7 @@ nav.nav-menu {
 
 .nav-menu a {
   border-bottom: 1px solid #636366;
-  color: #ffffff;
+  color: $grey50;
   padding: 0 20px;
   line-height: 45px;
   transition: margin 1s;
@@ -378,6 +386,8 @@ nav.nav-menu {
     transform: translateY(0px);
   }
 }
+
+
 /* Social-Icons */
 
 .social-icons i {
@@ -400,68 +410,65 @@ nav.nav-menu {
    Contact Form
    ========================================================================== */
 
-#contact form {
+.contact form {
   border: 2px solid rgba(0, 0, 0, 0.5);
   margin: 0 auto 0 auto;
   padding: 20px;
-}
 
-#contact form div {
-  margin: 0 0 10px 0;
-}
-
-#contact label {
-  display: block;
-  margin: 0 0 5px 0;
-  font-weight: 700;
-  text-align: left;
-}
-
-#contact input[type="text"],
-input[type="email"],
-input[type="tel"] {
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  background: transparent;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  font-size: 1.4rem;
-  width: 100%;
-  color: #58595b;
-  transition: all 0.5s;
-}
-
-#contact input:focus,
-textarea:focus {
-  outline: #9c010a solid thin;
-}
-
-textarea {
-  resize: vertical;
-  padding: 10px;
-  width: 100%;
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  background: transparent;
-  color: #58595b;
-  height: 120px;
-  transition: all 0.5s;
-}
-
-#contact input[type="submit"] {
-  background: #9c010a;
-  border: none;
-  outline: none;
-  color: #ffffff;
-  padding: 10px;
-  font-size: 1.4rem;
-  font-weight: 700;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto 0 auto;
-  transition: all .5s ease-in-out;
-}
-
-#contact input[type="submit"]:hover {
-  opacity: 0.7;
+  & div {
+    margin: 0 0 10px 0;
+  }
+  
+  & label {
+    display: block;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+    text-align: left;
+  }
+  & input[type="text"],
+  & input[type="email"],
+  & input[type="tel"] {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background: transparent;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    width: 100%;
+    transition: all 0.5s;
+  }
+  & input:focus,
+    textarea:focus {
+    outline: $red500 solid thin;
+  }
+  
+  & textarea {
+    resize: vertical;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background: transparent;
+    color: $grey900;
+    height: 120px;
+    transition: all 0.5s;
+  }
+  
+  & input[type="submit"] {
+    background: $red500;
+    border: none;
+    outline: none;
+    color: $grey50;
+    padding: 10px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 0 auto;
+    transition: all .5s ease-in-out;
+  }
+  & input[type="submit"]:hover {
+    opacity: 0.7;
+    padding: 10px 20px;
+  }
 }
 
 
@@ -481,7 +488,7 @@ textarea {
   bottom: 30px;
   right: 20px;
   background: #21252b;
-  color: #fff;
+  color: $grey50;
   padding: 10px 15px;
   font-size: 1.5rem;
   transition: all 0.7s;
@@ -494,8 +501,10 @@ textarea {
     visibility: visible;
     bottom: 20px;
   }
+}
 
-
+.hide-svg {
+  display: none;
 }
 
 
@@ -526,16 +535,12 @@ textarea {
 
 @media screen and (max-width: 550px) {
   body {}
-  header {
-    padding-top: 10px;
+  
+  .container {
+    padding: 1rem;
   }
-  .headerlogo {
-    width: 80%;
-  }
-  .hide-on-mob {
-    display: none;
-  }
-  .menu-icon {
-    max-width: 15%;
+  
+  .coding-links {
+    text-align: center;
   }
 }
