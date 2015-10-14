@@ -12,7 +12,8 @@
 
 # OS or Editor folders
 ._*
-.cache
-.DS_Store
-.sass-cache
+.cache/
+.DS_Store/
+.sass-cache/
+*.scssc
 Thumbs.db
