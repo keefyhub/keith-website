@@ -246,6 +246,7 @@ dt:after {
 
 
 /* Projects */
+/* 1, added translateZ(0) for smoother animations */
 
 .projects .title {
   border-bottom: 1px solid $grey900;
@@ -263,6 +264,7 @@ dt:after {
 
 .projects img {
   transition: all 0.5s;
+  transform: translateZ(0); /*[1]*/
 }
 
 .projects img:hover {
@@ -475,7 +477,7 @@ dt:after {
     border: none;
     outline: none;
     color: $grey50;
-    padding: 10px;
+    padding: 10px 20px;
     font-size: 1.4rem;
     font-weight: 700;
     cursor: pointer;
@@ -485,7 +487,23 @@ dt:after {
   }
   & input[type="submit"]:hover {
     opacity: 0.7;
-    padding: 10px 20px;
+    padding: 10px 30px;
+  }
+
+  & .error-message {
+    background: $red500;
+    color: $grey50;
+    opacity: 0;
+    padding: 1rem;
+    transform: translate(-100px.0);
+    transition: all 0.7s;
+    &.active {
+      opacity: 1;
+      transform: translate(0);
+    }
+    & i {
+      margin-right: 1rem;
+    }
   }
 }
 
