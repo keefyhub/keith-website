@@ -1,4 +1,5 @@
 # Numerous always-ignore extensions
+*.cdr
 *.diff
 *.err
 *.log
@@ -12,8 +13,10 @@
 
 # OS or Editor folders
 ._*
-.cache\
-.DS_Store\
-.sass-cache\
-*.scssc
+.cache
+.sass_cache
+.DS_Store
 Thumbs.db
+node_modules/*
+sass_cache/*
+build/*
