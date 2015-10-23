@@ -75,9 +75,7 @@ input, textarea, select {
 }
 
 /* submit button reset for iOS */
-input {
+input[type="submit"] {
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	border-radius: 0;
-	box-shadow: none;
 }
