@@ -1,29 +1,28 @@
 {
-  "name": "gulp-template",
+  "name": "keith-website",
   "version": "1.0.0",
-  "description": "my default template for new projects",
+  "description": "package for my website",
   "main": "index.html",
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.0.2",
-    "gulp-cache": "^0.3.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-imagemin": "^2.3.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.4",
-    "gulp-uglify": "^1.4.2"
-  },
   "scripts": {
     "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/keefyhub/gulp-template"
+    "url": "git+https://github.com/keefyhub/keith-website.git"
   },
   "bugs": {
-    "url": "https://github.com/keefyhub/gulp-template/issues"
+    "url": "https://github.com/keefyhub/keith-website/issues"
   },
   "author": "Keith Light",
   "license": "WTFPL",
-  "homepage": "https://github.com/n/a#readme"
+  "homepage": "https://github.com/keefyhub/keith-website/#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cache": "^0.3.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.4.2"
+  }
 }
