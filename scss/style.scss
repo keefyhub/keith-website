@@ -3,6 +3,7 @@
 @import 'mixins/reset';
 @import 'mixins/lanes';
 @import 'mixins/material-design-colors';
+//@import 'mixins/diagnostics';
 
 $body-font-stack: 'Lato', Tahoma, Geneva, sans-serif;
 $header-font-stack: 'Lustria';
@@ -246,7 +247,10 @@ dt:after {
 
 
 /* Projects */
-/* 1, added translateZ(0) for smoother animations */
+/* 1, added display block to a tags with images for older iPad/iPhone support -
+  http://stackoverflow.com/questions/24968255/specific-links-not-clickable-on-older-iphone-ipad
+*/
+/* 2, added translateZ(0) for smoother animations */
 
 .projects .title {
   border-bottom: 1px solid $grey900;
@@ -260,11 +264,15 @@ dt:after {
   margin: 10px 0;
   overflow: hidden;
   background: $grey900;
+
+  & a {
+    display: block; /*[1]*/
+  }
 }
 
 .projects img {
   transition: all 0.5s;
-  transform: translateZ(0); /*[1]*/
+  transform: translateZ(0); /*[2]*/
 }
 
 .projects img:hover {
@@ -431,7 +439,7 @@ dt:after {
    ========================================================================== */
 
 .contact form {
-  border: 2px solid rgba(0, 0, 0, 0.5);
+  border: 2px solid $grey600;
   margin: 0 auto 0 auto;
   padding: 20px;
 
@@ -448,11 +456,10 @@ dt:after {
   & input[type="text"],
   & input[type="email"],
   & input[type="tel"] {
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    border: 2px solid $grey600;
     background: transparent;
     padding: 10px 15px;
     margin-bottom: 10px;
-    font-size: 1.4rem;
     width: 100%;
     transition: all 0.5s;
   }
@@ -465,7 +472,7 @@ dt:after {
     resize: vertical;
     padding: 10px;
     width: 100%;
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    border: 2px solid $grey600;
     background: transparent;
     color: $grey900;
     height: 120px;
