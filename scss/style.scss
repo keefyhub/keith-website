@@ -230,8 +230,12 @@ dt:after {
   background: $amber700;
 }
 
+.git {
+  background: $red500;
+}
+
 .node {
-  background: $red700;
+  background: $green400;
 }
 
 .ruby {
@@ -479,7 +483,7 @@ dt:after {
     transition: all 0.5s;
   }
   
-  & input[type="submit"] {
+  & .submit-button {
     background: $red500;
     border: none;
     outline: none;
@@ -490,11 +494,10 @@ dt:after {
     cursor: pointer;
     display: block;
     margin: 0 auto 0 auto;
-    transition: all .5s ease-in-out;
-  }
-  & input[type="submit"]:hover {
-    opacity: 0.7;
-    padding: 10px 30px;
+    transition: all .5s;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   & .error-message {
