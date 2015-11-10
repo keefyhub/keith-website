@@ -7,7 +7,7 @@ $(document).ready(function() {
   });
 
   $('.arrow-up').click(function() {
-    $('body').animate({
+    $('html, body').animate({
       scrollTop: 0
     }, 500);
   });
