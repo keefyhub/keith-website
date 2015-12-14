@@ -204,7 +204,7 @@ dt:after {
 }
 
 // loop for adding transition delay to each skill 
-@for $i from 1 through 9 {
+@for $i from 1 through 10 {
   .skills dd:nth-of-type(#{$i}) {
     transition-delay: 0.15 * $i + s;
   }
@@ -228,6 +228,10 @@ dt:after {
 
 .javascript {
   background: $amber700;
+}
+
+.wordpress {
+  background: $blue800;
 }
 
 .git {
