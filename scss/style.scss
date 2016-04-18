@@ -203,8 +203,8 @@ dt:after {
   transition: all 2s $bounceInOut;
 }
 
-// loop for adding transition delay to each skill 
-@for $i from 1 through 10 {
+// loop for adding transition delay to each skill
+@for $i from 1 through 11 {
   .skills dd:nth-of-type(#{$i}) {
     transition-delay: 0.15 * $i + s;
   }
@@ -248,6 +248,10 @@ dt:after {
 
 .php {
   background: $indigo700;
+}
+
+.react {
+  background: $blue400;
 }
 
 
@@ -357,7 +361,7 @@ dt:after {
   background: #272727;
   left: -250px;
   /* start off behind the scenes */
-  
+
   top: 0;
   height: 100%;
   position: fixed;
@@ -454,7 +458,7 @@ dt:after {
   & div {
     margin: 0 0 10px 0;
   }
-  
+
   & label {
     display: block;
     margin: 0 0 5px 0;
@@ -475,7 +479,7 @@ dt:after {
     textarea:focus {
     outline: $red500 solid thin;
   }
-  
+
   & textarea {
     resize: vertical;
     padding: 10px;
@@ -486,7 +490,7 @@ dt:after {
     height: 120px;
     transition: all 0.5s;
   }
-  
+
   & .submit-button {
     background: $red500;
     border: none;
@@ -530,7 +534,7 @@ dt:after {
 /* ==========================================================================
    EDITS
    ========================================================================== */
-   
+
 .arrow-up {
   opacity: 0;
   visibility: hidden;
@@ -585,11 +589,11 @@ dt:after {
 
 @media screen and (max-width: 550px) {
   body {}
-  
+
   .container {
     padding: 1rem;
   }
-  
+
   .coding-links {
     text-align: center;
   }

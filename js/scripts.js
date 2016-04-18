@@ -1,16 +1,18 @@
 $(document).ready(function() {
+  // Contact scroll to button
   $('.js-contact').click(function(e) {
     e.preventDefault;
     $('html, body').animate({
       scrollTop: $("#contact").position().top
     }, 2000);
   });
-
+  // Back to top arrow
   $('.arrow-up').click(function() {
     $('html, body').animate({
       scrollTop: 0
     }, 500);
   });
+  // Skills display
   $(window).scroll(function() {
     // get skills position from top
     var x = $('.skills').position().top;
@@ -29,7 +31,6 @@ $(document).ready(function() {
         );
       });
     }
-
     // display arrow-up if near the bottom of the page
     var a = $(window).scrollTop();
     var b = $(window).height() / 2;
