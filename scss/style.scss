@@ -9,6 +9,9 @@ $body-font-stack: 'Lato', Tahoma, Geneva, sans-serif;
 $header-font-stack: "Lustria", Cambria, Georgia, serif;
 
 $bounceInOut: cubic-bezier(1,-1.25,0,1.75);
+$linear-gradient: linear-gradient(#b4d7d9, #eccfbd);
+$background-fallback: #b4d7d9;
+$skills-background: #e0e0e0;
 
 
 
@@ -24,32 +27,31 @@ html {
 }
 
 body {
+  background: $background-fallback;
+  background: $linear-gradient;
+  color: $grey900;
   font-family: $body-font-stack;
   font-size: 1rem;
   line-height: 1.5;
-  color: $grey900;
-  background: #b4d7d9 url(/images/blurry-background.jpg)no-repeat center center;
-  /* fallback for older browsers */
-  background-size: cover;
-  background: linear-gradient(#b4d7d9, #eccfbd);
   transition: background 1.5s;
 }
 
 header {
   background: $red500;
-  text-align: center;
   overflow: hidden;
+  text-align: center;
 }
 
 footer {
-  font-size: 1.4rem;
   background: $red500;
   color: $grey50;
+  font-size: 1.4rem;
+  padding: 10px 0;
   text-align: center;
-  padding: 10px 0 10px 0;
 }
 
-section.container , footer {
+section.container,
+footer {
   margin-top: 5rem;
 }
 
@@ -68,8 +70,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  font-size: 2.5rem;
   font-family: $header-font-stack;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
@@ -78,14 +80,15 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5rem;
   font-family: $header-font-stack;
+  font-size: 1.5rem;
 }
 
 p {
   margin: 1rem 0;
+
   &:first-child {
-    margin: 0 0 1rem 0;
+    margin: 0 0 1rem;
   }
 }
 
@@ -108,13 +111,13 @@ a {
 }
 
 .row a {
-  font-weight: 700;
   color: $grey900;
-  transition: color 0.7s;
-}
+  font-weight: 700;
+  transition: color .7s;
 
-.row a:hover {
-  color: $red500;
+  &:hover {
+    color: $red500;
+  }
 }
 
 
@@ -126,27 +129,20 @@ a {
 /* ==========================================================================
    Main Sections
    ========================================================================== */
-/* GLOBAL */
-
-.hero {
-}
-
-
-
-
 
 /* Header */
 .headerlogo {
-  max-width: 100px;
-  transform: translateY(100px);
-  opacity: 0;
   animation: fadeInUp 1s forwards $bounceInOut;
+  height: 100px;
+  opacity: 0;
+  transform: translateY(100px);
+  width: 100px;
 }
 
 @keyframes fadeInUp {
   100% {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -173,7 +169,10 @@ div.SSBD p:nth-of-type(even) {
 
 .coding-links {
   font-size: 2rem;
-  & a {margin-right: 2rem;}
+
+  a {
+    margin-right: 2rem;
+  }
 }
 
 
@@ -185,28 +184,27 @@ div.SSBD p:nth-of-type(even) {
 
 /* Skills */
 
-dt:after {
-  width: 100%;
-  background-color: #e0e0e0;
-  height: 0.5rem;
+dt::after {
+  background-color: $skills-background;
   content: "";
   display: block;
+  height: 0.5rem;
+  width: 100%;
 }
 
 .skill-percent {
-  background: red;
-  width: 0;
-  height: 0.5rem;
-  position: relative;
-  top: -0.5rem;
   font-size: 0;
+  height: .5rem;
+  position: relative;
+  top: -.5rem;
   transition: all 2s $bounceInOut;
+  width: 0;
 }
 
 // loop for adding transition delay to each skill
 @for $i from 1 through 11 {
   .skills dd:nth-of-type(#{$i}) {
-    transition-delay: 0.15 * $i + s;
+    transition-delay: .15 * $i + s;
   }
 }
 
@@ -285,11 +283,11 @@ dt:after {
 .projects img {
   transition: all 0.5s;
   transform: translateZ(0); /*[2]*/
-}
 
-.projects img:hover {
-  transform: scale(1.2);
-  opacity: 0.8;
+  &:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
 }
 
 
@@ -298,10 +296,11 @@ dt:after {
 /* Coming Soon */
 
 .coming-soon {
-  & p, & li {
-    height: 14rem;
+  p,
+  li {
     background: linear-gradient($grey400 50%, transparent 50%);
     background-size: 1rem 3rem;
+    height: 14rem;
     margin: 1rem 0;
   }
 }
@@ -455,71 +454,76 @@ dt:after {
   margin: 0 auto 0 auto;
   padding: 20px;
 
-  & div {
+  div {
     margin: 0 0 10px 0;
   }
 
-  & label {
+  label {
     display: block;
     margin: 0 0 5px 0;
     font-weight: 700;
     text-align: left;
   }
-  & input[type="text"],
-  & input[type="email"],
-  & input[type="tel"] {
-    border: 2px solid $grey600;
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
     background: transparent;
-    padding: 10px 15px;
+    border: 2px solid $grey600;
     margin-bottom: 10px;
+    padding: 10px 15px;
+    transition: all .5s;
     width: 100%;
-    transition: all 0.5s;
   }
-  & input:focus,
+
+  input:focus,
     textarea:focus {
     outline: $red500 solid thin;
   }
 
-  & textarea {
-    resize: vertical;
-    padding: 10px;
-    width: 100%;
-    border: 2px solid $grey600;
+  textarea {
     background: transparent;
+    border: 2px solid $grey600;
     color: $grey900;
     height: 120px;
-    transition: all 0.5s;
+    padding: 10px;
+    resize: vertical;
+    transition: all .5s;
+    width: 100%;
   }
 
-  & .submit-button {
+  .submit-button {
     background: $red500;
-    border: none;
-    outline: none;
+    border: 0;
     color: $grey50;
-    padding: 10px 20px;
-    font-size: 1.4rem;
-    font-weight: 700;
     cursor: pointer;
     display: block;
-    margin: 0 auto 0 auto;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 auto;
+    outline: none;
+    padding: 10px 20px;
     transition: all .5s;
+
     &:hover {
-      opacity: 0.7;
+      opacity: .7;
     }
   }
 
-  & .error-message {
+  .error-message {
     background: $red500;
     color: $grey50;
     opacity: 0;
     padding: 1rem;
     transform: translate(-100px.0);
-    transition: all 0.7s;
+    transition: all .7s;
+
     &.active {
       opacity: 1;
       transform: translate(0);
     }
-    & i {
+
+    i {
       margin-right: 1rem;
     }
   }
@@ -536,24 +540,24 @@ dt:after {
    ========================================================================== */
 
 .arrow-up {
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  bottom: 30px;
-  right: 20px;
   background: #21252b;
+  bottom: 30px;
   color: $grey50;
-  padding: 10px 15px;
-  font-size: 1.5rem;
-  transition: all 0.7s;
-  transform: translateZ(0);
   cursor: pointer;
+  font-size: 1.5rem;
+  opacity: 0;
+  padding: 10px 15px;
+  position: fixed;
+  right: 20px;
+  transform: translateZ(0);
+  transition: all .7s;
+  visibility: hidden;
 
 
   &.arrow-active {
+    bottom: 20px;
     opacity: 1;
     visibility: visible;
-    bottom: 20px;
   }
 }
 
@@ -571,11 +575,11 @@ dt:after {
    ========================================================================== */
 
 .browsehappy {
+  background: $grey300;
+  color: $grey900;
+  margin: .2em 0;
+  padding: 10px 0;
   text-align: center;
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 10px 0 10px 0;
 }
 
 
@@ -588,8 +592,6 @@ dt:after {
    ========================================================================== */
 
 @media screen and (max-width: 550px) {
-  body {}
-
   .container {
     padding: 1rem;
   }
