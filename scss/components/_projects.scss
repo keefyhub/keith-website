@@ -1,0 +1,84 @@
+@for $i from 1 through length($colors) {
+  .project__item:nth-child(#{$i})::after {
+    background-color: rgba(nth($colors, $i), .7);
+  }
+}
+
+.projects {
+  display: flex;
+}
+
+.project__item {
+  @include background-cover;
+  cursor: pointer;
+  font-weight: 700;
+  height: 50vh;
+  max-height: 600px;
+  min-height: 400px;
+  padding: 40px;
+  position: relative;
+  text-decoration: none;
+  width: 60%;
+
+  &::after {
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateZ(0);
+    transition: opacity $link-transition-timing;
+    width: 100%;
+  }
+
+  &:hover {
+    .project__item-content {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  &:nth-child(4n-1),
+  &:nth-child(4n-2) {
+    width: 40%;
+  }
+
+  &--ela-rae {
+    background-image: url('./build/images/ela-rae.jpg');
+    background-position: center top;
+  }
+
+  &--weather-app {
+    background-image: url('./build/images/weather-app.jpg');
+  }
+
+  &--dirtees {
+    background-image: url('./build/images/dirtees.jpg');
+  }
+
+  &--stitch-republic {
+    background-image: url('./build/images/stitch-republic.jpg');
+    background-position: center top;
+  }
+
+  &--love-emma {
+    background-image: url('./build/images/love-emma.jpg');
+  }
+
+  &--responsive-menu {
+    background-image: url('./build/images/responsive-menu.jpg');
+  }
+
+  &-content {
+    @include vertical-center(absolute);
+    transition: opacity $link-transition-timing;
+    z-index: 10;
+  }
+}

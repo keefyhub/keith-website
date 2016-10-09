@@ -1,0 +1,19 @@
+.container {
+  margin: 0 auto;
+  position: relative;
+
+  &--small {
+    @extend .container;
+    max-width: 1080px;
+  }
+
+  &--standard {
+    @extend .container;
+    max-width: 1200px;
+  }
+
+  &--full {
+    @extend .container;
+    max-width: 2400px;
+  }
+}

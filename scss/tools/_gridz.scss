@@ -1,0 +1,34 @@
+$num-grid-col: 12;
+
+%grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid {
+  @extend %grid;
+}
+
+%col {
+  flex-flow: column;
+}
+
+@for $i from 1 through $num-grid-col {
+  %col-#{$i} {
+    @extend %col;
+    width: percentage($i / $num-grid-col);
+  }
+
+  .col-#{$i} {
+    @extend %col-#{$i};
+  }
+
+  %col-push-#{$i} {
+    @extend %col;
+    margin-left: percentage($i / $num-grid-col);
+  }
+
+  .col-push-#{$i} {
+    @extend %col-push-#{$i};
+  }
+}

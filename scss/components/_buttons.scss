@@ -1,0 +1,46 @@
+.btn {
+  border: 2px solid transparent;
+  display: inline-block;
+  padding: 10px 20px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color $link-transition-timing,
+              color $link-transition-timing;
+
+
+  &--light {
+    border-color: $button-light-background-color;
+
+    &:focus,
+    &:hover {
+      background-color: $button-light-background-color;
+      color: $button-light-highlight-color;
+    }
+  }
+
+  &--dark {
+    border-color: $button-light-highlight-color;
+
+    &:focus,
+    &:hover {
+      background-color: $button-light-highlight-color;
+      color: $button-light-background-color;
+    }
+  }
+
+  &--chevron::after {
+    @include font-size(1.6);
+    content: '\f054';
+    font-family: 'fontawesome';
+    margin-left: 30px;
+  }
+
+  &-row {
+    display: flex;
+
+    > *:first-child {
+      margin-right: 20px;
+    }
+  }
+}

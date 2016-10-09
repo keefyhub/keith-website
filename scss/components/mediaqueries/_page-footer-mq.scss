@@ -1,0 +1,11 @@
+@media only screen and (max-width: 678px) {
+  .page-footer {
+    > * {
+      flex-direction: column;
+    }
+
+    &__copy {
+      margin-top: 20px;
+    }
+  }
+}

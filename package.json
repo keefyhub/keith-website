@@ -1,10 +1,11 @@
 {
   "name": "keith-website",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "package for my website",
   "main": "index.html",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "build": "rm -rf build && gulp"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,7 @@
   "author": "Keith Light",
   "license": "WTFPL",
   "homepage": "https://github.com/keefyhub/keith-website/#readme",
-  "dependencies": {
+  "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cache": "^0.3.0",

@@ -1,0 +1,19 @@
+*:empty {
+  padding: 0.5rem;
+  background: $yellow500;
+}
+
+*[class=""], *[id=""] {
+  outline: 5px dotted $red900;
+}
+
+img[alt=""] {border: 3px dotted $red500;}
+img:not([alt]) {border: 5px solid $red500;}
+img[title=""] {outline: 3px dotted $pink500;}
+img:not([title]) {outline: 5px solid $pink500;}
+
+
+a[href]:not([title]) {border: 5px solid $red500;}
+a[title=""] {outline: 3px dotted $red500;}
+a[href="#"] {background: $lime500;}
+a[href=""] {background: $pink500;}

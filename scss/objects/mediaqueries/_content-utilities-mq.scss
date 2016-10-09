@@ -1,0 +1,13 @@
+@media only screen and (max-width: 1024px) {
+  .inner-content {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .inner-content {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+}

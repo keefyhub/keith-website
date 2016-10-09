@@ -1,0 +1,86 @@
+.title {
+  font-weight: 700;
+  margin-bottom: 40px;
+
+  &--with-underline {
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      background-color: $underline-color;
+      bottom: -15px;
+      content: '';
+      height: 2px;
+      left: 0;
+      position: absolute;
+      width: 40px;
+    }
+  }
+
+  &--full {
+    display: block;
+
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.inner-content {
+  padding: 100px 0;
+}
+
+.content {
+  > *:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .title {
+    margin-top: 30px;
+  }
+
+  ul {
+    margin-left: 30px;
+
+    li {
+      list-style: disc;
+      margin-bottom: 10px;
+    }
+  }
+
+  a:not([class^='social-icons__']) {
+    transition: opacity $link-transition-timing;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  @for $i from 1 through length($colors) {
+    .highlight {
+      &:nth-child(#{$i})::before {
+        background-color: rgba(nth($colors, $i), .7);
+      }
+
+      &--link:nth-child(#{$i}) {
+        color: rgba(nth($colors, $i), .7);
+      }
+    }
+  }
+}
+
+.highlight {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+
+  &::before {
+    background-color: $underline-color;
+    bottom: -2px;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}

@@ -1,0 +1,48 @@
+.social-icons {
+  display: flex;
+
+  &__codepen,
+  &__github,
+  &__linked-in {
+    @include font-size(0);
+    background-color: $social-icons-background-color;
+    border-radius: 50%;
+    display: block;
+    height: 40px;
+    position: relative;
+    text-decoration: none;
+    width: 40px;
+
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+
+    &:hover::after {
+      color: $social-icons-hover-color;
+      transform: translate(-50%, -60%);
+    }
+
+    &::after {
+      @include font-size(2);
+      @include absolute-center(absolute);
+      color: $social-icons-color;
+      transition: color $link-transition-timing,
+                  transform $link-transition-timing;
+    }
+  }
+
+  &__codepen::after {
+    content: '\f1cb';
+    font-family: 'fontawesome';
+  }
+
+  &__github::after {
+    content: '\f113';
+    font-family: 'fontawesome';
+  }
+
+  &__linked-in::after {
+    content: '\f0e1';
+    font-family: 'fontawesome';
+  }
+}

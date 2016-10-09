@@ -1,0 +1,78 @@
+input[type="submit"],
+input[type="reset"] {
+  background-color: inherit;
+  color: inherit;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.contact-form {
+  label {
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+
+  input:not([type="submit"]):not([type="reset"]),
+  textarea {
+    @include font-size(1.8);
+    background-color: $input-background-color;
+    border: 1px solid transparent;
+    color: $input-color;
+    padding: 20px;
+    transition: border-color $link-transition-timing;
+    width: 100%;
+
+    &:focus {
+      border-color: $input-border-focus-color;
+    }
+  }
+
+  input:not([type="submit"]) {
+    height: 60px;
+  }
+
+  textarea {
+    height: 200px;
+    resize: vertical;
+  }
+
+  &__field {
+    margin-bottom: 20px;
+  }
+
+  .col-6 {
+    &:nth-child(odd) {
+      padding-right: 20px;
+    }
+
+    &:nth-child(even) {
+      padding-left: 20px;
+    }
+  }
+
+  .error-message {
+    border: 1px solid $input-error-color;
+    display: none;
+    margin-bottom: 20px;
+    opacity: 0;
+    padding: 20px;
+    transform: translate(-100px , 0);
+    transition: opacity $link-transition-timing,
+                transofrm $link-transition-timing;
+    width: 100%;
+
+    &::before {
+      content: '\f12a';
+      font-family: 'fontawesome';
+      margin-right: 10px;
+    }
+
+    &--active {
+      display: block;
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+}

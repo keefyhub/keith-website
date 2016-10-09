@@ -1,0 +1,14 @@
+.animate {
+  transform: translateZ(0);
+  transition: opacity $animation-transition-timing,
+              transform $animation-transition-timing;
+}
+
+.fadeIn {
+  opacity: 0;
+}
+
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(50px);
+}

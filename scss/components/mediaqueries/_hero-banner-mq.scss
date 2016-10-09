@@ -1,0 +1,23 @@
+@media only screen and (max-width: 678px) {
+  .hero-banner {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 0 40px;
+
+    &__content {
+      align-items: center;
+
+      > *:nth-child(odd),
+      > *:nth-child(even) {
+        padding: 0;
+        width: 100%;
+      }
+
+      .btn {
+        display: inline-block;
+        margin-top: 60px;
+      }
+    }
+  }
+
+}

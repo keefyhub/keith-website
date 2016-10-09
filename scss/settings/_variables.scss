@@ -1,0 +1,63 @@
+// Fonts
+$_standard-font-family: 'Lato', sans-serif;
+
+// Colors
+$_color-white: #fff;
+$_color-valhalla: #242943;
+$_color-viking: #6fc3df;
+$_color-blue-bell: #8d82c4;
+$_color-apricot: #ec8d81;
+$_color-gold-sand: #e7b788;
+$_color-portage: #8ea9e8;
+$_color-de-york: #87c5a4;
+$_color-lucky-point: #2a2f4a;
+$_color-biscay: #363a56;
+
+// Globals
+$body-font-stack: 'Lato', Tahoma, Geneva, sans-serif;
+$body-background-color: $_color-valhalla;
+$body-color: $_color-white;
+$link-transition-timing: .3s;
+$animation-transition-timing: .75s;
+$animation-delay-timing: .5s;
+$ease-bounce-in-out: cubic-bezier(1, -1.25, 0, 1.75);
+
+// Defaults
+$underline-color: $_color-white;
+
+// Page Header
+$logo-color: $_color-white;
+$logo-hover-color: $blue500;
+$logo-highlight-color: $_color-valhalla;
+
+// Page Footer
+$footer-border-color: $_color-biscay;
+
+// Skillz
+$skillz-background-color: $_color-lucky-point;
+
+// Contact Form
+$input-background-color: $_color-lucky-point;
+$input-color: $_color-white;
+$input-border-focus-color: $blue500;
+$input-error-color: $red500;
+
+// Back To Top
+$back-to-top-background-color: $grey900;
+$back-to-top-color: $_color-white;
+
+// Buttons
+$button-light-background-color: $_color-white;
+$button-light-highlight-color: $blue500;
+
+// Social Icons
+$social-icons-background-color: $_color-white;
+$social-icons-color: $_color-biscay;
+$social-icons-hover-color: $blue500;
+
+// Browse Happy
+$browsehappy-background-color: $_color-white;
+$browsehappy-color: $grey900;
+
+// Color Loop
+$colors: $_color-viking, $_color-blue-bell, $_color-apricot, $_color-gold-sand, $_color-portage, $_color-de-york;

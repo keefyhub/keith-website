@@ -1,0 +1,12 @@
+@media only screen and (max-width: 678px) {
+  .contact-form {
+    .col-6 {
+      width: 100%;
+
+      &:nth-child(odd),
+      &:nth-child(even) {
+        padding: 0;
+      }
+    }
+  }
+}

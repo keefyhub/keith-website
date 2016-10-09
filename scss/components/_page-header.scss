@@ -1,0 +1,33 @@
+.page-header {
+  background-color: $body-background-color;
+  display: flex;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  z-index: 20;
+
+  &__logo {
+    align-items: center;
+    display: flex;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color $link-transition-timing;
+
+    &:hover {
+      color: $logo-hover-color;
+
+      .page-header__logo-svg {
+        fill: $logo-hover-color;
+      }
+    }
+
+    &-svg {
+      background-color: $logo-color;
+      fill: $logo-highlight-color;
+      height: 40px;
+      margin-right: 10px;
+      transition: fill $link-transition-timing;
+      width: 40px;
+    }
+  }
+}

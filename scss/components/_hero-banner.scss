@@ -1,0 +1,33 @@
+.hero-banner {
+  @extend %overlay-hover;
+  @include background-cover;
+  align-items: center;
+  background-image: url('./build/images/hero-banner-background.jpg');
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  min-height: 600px;
+
+  &::before {
+    background-color: rgba($body-background-color, .7);
+    opacity: 1;
+  }
+
+  &__content {
+    align-items: center;
+
+    > * {
+      &:first-child {
+        padding-right: 20px;
+      }
+
+      &:last-child {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+html:not(.iOS) .hero-banner {
+  background-attachment: fixed;
+}

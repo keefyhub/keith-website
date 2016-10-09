@@ -1,0 +1,9 @@
+@media only screen and (max-width: 1280px) {
+  .container {
+    &--small,
+    &--standard {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
