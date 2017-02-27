@@ -4,12 +4,19 @@ $_standard-font-family: 'Lato', sans-serif;
 // Colors
 $_color-white: #fff;
 $_color-valhalla: #242943;
+
 $_color-viking: #6fc3df;
 $_color-blue-bell: #8d82c4;
 $_color-apricot: #ec8d81;
 $_color-gold-sand: #e7b788;
 $_color-portage: #8ea9e8;
 $_color-de-york: #87c5a4;
+$_color-dark-pastel-blue: #7996ce;
+$_color-lavander-purple: #8c80b0;
+$_color-ruddy-pink: #dc8c95;
+$_color-opera-mauve: #ad7daf;
+$_color-fountain-blue: #66acb6;
+$_color-acapulco: #6ca88e;
 $_color-lucky-point: #2a2f4a;
 $_color-biscay: #363a56;
 
@@ -20,7 +27,7 @@ $body-color: $_color-white;
 $link-transition-timing: .3s;
 $animation-transition-timing: .75s;
 $animation-delay-timing: .5s;
-$ease-bounce-in-out: cubic-bezier(1, -1.25, 0, 1.75);
+$ease-bounce-in-out: cubic-bezier(1, 0, .25, 1);
 
 // Defaults
 $underline-color: $_color-white;
@@ -60,4 +67,4 @@ $browsehappy-background-color: $_color-white;
 $browsehappy-color: $grey900;
 
 // Color Loop
-$colors: $_color-viking, $_color-blue-bell, $_color-apricot, $_color-gold-sand, $_color-portage, $_color-de-york;
+$colors: $_color-viking, $_color-blue-bell, $_color-apricot, $_color-gold-sand, $_color-portage, $_color-de-york, $_color-dark-pastel-blue, $_color-ruddy-pink, $_color-lavander-purple, $_color-opera-mauve, $_color-fountain-blue, $_color-acapulco;

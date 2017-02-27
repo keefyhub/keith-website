@@ -1,6 +1,7 @@
 @for $i from 1 through length($colors) {
   .project__item:nth-child(#{$i})::after {
-    background-color: rgba(nth($colors, $i), .7);
+    background-color: nth($colors, $i);
+    opacity: .5;
   }
 }
 
@@ -31,14 +32,9 @@
     width: 100%;
   }
 
-  &:hover {
-    .project__item-content {
-      opacity: 0;
-    }
-
-    &::after {
-      opacity: 0;
-    }
+  &:focus::after,
+  &:hover::after {
+    opacity: .9;
   }
 
   .title {
@@ -50,17 +46,38 @@
     width: 40%;
   }
 
-  &--ela-rae {
-    background-image: url('./build/images/ela-rae.jpg');
+  &--back-to-front {
+    background-image: url('./build/images/back-to-front.jpg');
     background-position: center top;
   }
 
-  &--weather-app {
-    background-image: url('./build/images/weather-app.jpg');
+  &--blue-tree {
+    background-image: url('./build/images/blue-tree-recruits.jpg');
+    background-position: center top;
   }
 
-  &--dirtees {
-    background-image: url('./build/images/dirtees.jpg');
+  &--dock-menu {
+    background-image: url('./build/images/dock-menu.jpg');
+  }
+
+  &--ela-rae {
+    background-image: url('./build/images/ela-rae-music.jpg');
+    background-position: center top;
+  }
+
+  &--horton-barns {
+    background-image: url('./build/images/horton-barns.jpg');
+    background-position: center top;
+  }
+
+  &--hts-rds {
+    background-image: url('./build/images/hts-rds.jpg');
+    background-position: center top;
+  }
+
+  &--martin-ralph {
+    background-image: url('./build/images/martin-ralph.jpg');
+    background-position: center top;
   }
 
   &--stitch-republic {
@@ -68,17 +85,20 @@
     background-position: center top;
   }
 
-  &--love-emma {
-    background-image: url('./build/images/love-emma.jpg');
-  }
-
   &--responsive-menu {
     background-image: url('./build/images/responsive-menu.jpg');
   }
 
+  &--weather-app {
+    background-image: url('./build/images/weather-app.jpg');
+  }
+
   &-content {
-    @include vertical-center(absolute);
-    transition: opacity $link-transition-timing;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: calc(100% - 80px);
     z-index: 10;
   }
 }
