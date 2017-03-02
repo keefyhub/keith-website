@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "gulp test",
+    "start": "php -S 0.0.0.0:8000",
     "build": "rm -rf build && gulp"
   },
   "repository": {
