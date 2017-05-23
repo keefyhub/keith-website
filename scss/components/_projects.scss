@@ -1,7 +1,7 @@
 @for $i from 1 through length($colors) {
   .project__item:nth-child(#{$i})::after {
     background-color: nth($colors, $i);
-    opacity: .5;
+    opacity: .9;
   }
 }
 
@@ -34,7 +34,7 @@
 
   &:focus::after,
   &:hover::after {
-    opacity: .9;
+    opacity: .6;
   }
 
   .title {

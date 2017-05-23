@@ -8,7 +8,7 @@
   });
 
   $(window).scroll(function() {
-    var windowPosition = $(window).scrollTop();
+    var windowPosition = $(window).scrollTop(),
         windowTarget = $(window).height() / 2;
 
     if (windowPosition > windowTarget) {

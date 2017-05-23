@@ -11,9 +11,4 @@
     @extend .container;
     max-width: 1200px;
   }
-
-  &--full {
-    @extend .container;
-    max-width: 2400px;
-  }
 }

@@ -28,6 +28,7 @@
       color: $social-icons-color;
       transition: color $link-transition-timing,
                   transform $link-transition-timing;
+      will-change: color, transform;
     }
   }
 
