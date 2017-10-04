@@ -25,6 +25,10 @@
     "gulp-concat": "^2.6.0",
     "gulp-imagemin": "^2.3.0",
     "gulp-sass": "^2.0.4",
-    "gulp-uglify": "^1.4.2"
+    "gulp-uglify": "^1.4.2",
+    "sass-module-importer": "^1.4.0"
+  },
+  "dependencies": {
+    "reset-css": "^2.2.1"
   }
 }

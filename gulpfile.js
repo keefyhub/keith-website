@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     concat = require('gulp-concat'),
     imagemin = require('gulp-imagemin'),
+    moduleImporter = require('sass-module-importer'),
     sass = require('gulp-sass'),
     uglify = require('gulp-uglify');
 
@@ -31,24 +32,23 @@ gulp.task('scripts', function() {
 // Sass & Autoprefix
 gulp.task('sass', function() {
   gulp.src('./scss/style.scss')
+    .pipe(sass({importer: moduleImporter()}))
     .pipe(sass({outputStyle: 'compressed'}))
     .on('error', function(error) {
       console.log('Error : ' + error.message);
     })
-    .pipe(autoprefixer(
-      {
-        browsers: ['last 2 versions'],
-        cascade: false
-      }
-    ))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(gulp.dest('./'))
 });
 
 // Images (needs to be run separately but will watch for changes)
  gulp.task('images', function() {
   gulp.src('./images/**/*')
-   .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
-   .pipe(gulp.dest(assets +'images'));
+    .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+    .pipe(gulp.dest(assets +'images'));
 });
 
 // Watch
