@@ -63,3 +63,16 @@
     @include font-size($icon-size);
   }
 }
+
+$mobile-breakpoint: 425;
+$large-desktop-breakpoint: 1100;
+
+@mixin responsivetext($min, $max) {
+  $diff: $max - $min;
+  font-size: #{$max}px;
+  font-size: calc(#{$min}px + #{$diff} * (100vw - #{$mobile-breakpoint}px) / (#{$large-desktop-breakpoint} - #{$mobile-breakpoint}));
+
+  @media only screen and (min-width: $large-desktop-breakpoint + px) {
+    font-size: #{$max}px;
+  }
+}

@@ -1,6 +1,6 @@
 .title {
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 
   &--with-underline {
     display: inline-block;
@@ -8,12 +8,12 @@
 
     &::before {
       background-color: $underline-color;
-      bottom: -15px;
+      bottom: -1.5rem;
       content: '';
       height: 2px;
       left: 0;
       position: absolute;
-      width: 40px;
+      width: 4rem;
     }
   }
 
@@ -27,24 +27,24 @@
 }
 
 .inner-content {
-  padding: 100px 0;
+  padding: 10rem 0;
 }
 
 .content {
   > *:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
   }
 
   .title {
-    margin-top: 30px;
+    margin-top: 3rem;
   }
 
   ul {
-    margin-left: 30px;
+    margin-left: 3rem;
 
     li {
       list-style: disc;
-      margin-bottom: 10px;
+      margin-bottom: 1rem;
     }
   }
 

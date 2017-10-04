@@ -14,9 +14,9 @@
   cursor: pointer;
   font-weight: 700;
   height: 50vh;
-  max-height: 600px;
-  min-height: 400px;
-  padding: 40px;
+  max-height: 60rem;
+  min-height: 40rem;
+  padding: 4rem;
   position: relative;
   text-decoration: none;
   width: 60%;
@@ -38,7 +38,7 @@
   }
 
   .title {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
   }
 
   &:nth-child(4n-1),
@@ -102,7 +102,7 @@
     position: absolute;
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
-    width: calc(100% - 80px);
+    width: calc(100% - 8rem);
     z-index: 10;
   }
 }
