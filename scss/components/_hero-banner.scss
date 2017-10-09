@@ -6,7 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
-  min-height: 60rem;
+  min-height: 30rem;
 
   &::before {
     background-color: rgba($body-background-color, .7);
