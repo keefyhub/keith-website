@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     moduleImporter = require('sass-module-importer'),
     sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
     uglify = require('gulp-uglify');
 
 var assets = "./build/"
@@ -32,15 +33,18 @@ gulp.task('scripts', function() {
 // Sass & Autoprefix
 gulp.task('sass', function() {
   gulp.src('./scss/style.scss')
+    .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(sass({importer: moduleImporter()}))
-    .pipe(sass({outputStyle: 'compressed'}))
     .on('error', function(error) {
       console.log('Error : ' + error.message);
     })
+
+    .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
     }))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./'))
 });
 
