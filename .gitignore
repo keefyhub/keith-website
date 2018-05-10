@@ -21,3 +21,4 @@ node_modules/*
 sass_cache/*
 *.css.map
 *-lock.json
+.idea/*
